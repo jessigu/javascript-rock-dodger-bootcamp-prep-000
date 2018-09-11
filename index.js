@@ -60,10 +60,10 @@ function createRock(x) {
 
   /*This function moves the rock. (2 pixels at a time seems like a good pace.)*/
   function moveRock() {
-    rock.style.top = `${top -= 2}px`;
+    rock.style.top = `${top += 2}px`;
     if (checkCollision() === true) {
       endGame();
-    } else if (rock.style.top > 20) {
+    } else if (rock.style.top > GAME_HEIGHT) {
       window.requestAnimationFrame(moveRock);
     } else if (rock.style.top <= 20) {
       document.getElementById('game').removeChild('rock');
