@@ -103,15 +103,18 @@ function moveDodger(e) {
 function moveDodgerLeft() {
   var leftNumbers = DODGER.style.left.replace('px', '');
   var left = parseInt(leftNumbers, 10)
-  if (left <= 360) {
-    DODGER.style.left = `${left-4}px`;
+  if (left <= 0) {
+    DODGER.style.left = `${left -= 4}px`;
   }
-  window.requestAnimationFrame(moveDodgerLeft);
   /*This function should move DODGER to the left (mabye 4 pixels?). Use window.requestAnimationFrame()!*/
 }
 
 function moveDodgerRight() {
-  
+  var leftNumbers = DODGER.style.left.replace('px', '');
+  var left = parseInt(leftNumbers, 10)
+  if (left <= GAME_WIDTH) {
+    DODGER.style.left = `${left += 4}px`;
+  }
   /*This function should move DODGER to the left (mabye 4 pixels?). Use window.requestAnimationFrame()!*/
 }
 
