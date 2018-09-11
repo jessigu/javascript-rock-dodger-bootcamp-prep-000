@@ -93,6 +93,8 @@ function endGame() {
 function moveDodger(e) {
   if (e.which === LEFT_ARROW) {
     moveDodgerLeft();
+    e.preventDefault();
+    e.stopPro
   } else if (e.which === RIGHT_ARROW) {
     moveDodgerRight();
   }
