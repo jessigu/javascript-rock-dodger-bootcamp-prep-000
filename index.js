@@ -84,7 +84,7 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
   for (let i = 0; i < ROCKS.length; i++) {
-    ROCKS.splice(i);
+    ROCKS.remove(i);
   }
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
